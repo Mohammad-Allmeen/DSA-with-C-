@@ -1,27 +1,30 @@
 #include <iostream>
 using namespace std;
 
+class Student
+{
+    public:
+    int regNo ;
+    string name;
+    int age;
+
+
+    void details()
+    {
+        cout <<"Student reg no is "<< regNo <<endl;
+        cout << "Name is " << name << endl;
+        cout << "the age is" << age<< endl;
+
+
+    }
+};
+
 int main()
 {
-  
- int m1, m2, m3;  
-cout << "Enter the marks in three subjects";
-
-cin>>m1>>m2>>m3;
-
-double total= m1+m2+m3;
-//double per= ((total/300)*100);
-// double per = (static_cast<double>(total) / 300) * 100;
-double per = ((m1+m2+m3)/300.0)*100;
-cout<< "the per is" << per << endl;
-
-if (per>60)
-{
-    cout<<"Student is pass";
-}
-else
-{
-    cout<<"Student is fail";
-}
-return 0;
+    Student s1;
+    s1. regNo= 1;
+    s1.name= "Allmeen";
+    s1. age=22;
+    s1.details();
+    return 0;
 }

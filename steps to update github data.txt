@@ -1,0 +1,7 @@
+steps to update github data
+
+1. git add .
+
+2. git commit -m "first"
+
+3. git push
