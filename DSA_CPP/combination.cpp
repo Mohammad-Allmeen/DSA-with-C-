@@ -22,10 +22,7 @@ int main()
     cin>>valueN;
     cin>>valueR;
     int n= fact(valueN);
-    
 
-    
-    
 
     int den = fact(valueR)* fact(valueN-valueR);
     int combination = n/den;
