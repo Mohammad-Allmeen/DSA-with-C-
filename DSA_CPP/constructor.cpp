@@ -7,7 +7,7 @@ class Person
     
     string name;
     int age;
-
+    
     Person()
     {
      cout<< "from constructor" <<endl;
@@ -15,7 +15,7 @@ class Person
 
     Person(string name, int age)
     {
-     this->name =name; // to remove the ambiguity
+     this->name =name; // this is used to remove the ambiguity if we use same variable
      this->age =age;
     }
 
@@ -23,11 +23,11 @@ class Person
     {
         return age;
     }
-    string getName()
+   
+ string getName()
     {
         return name;
     }
-
    
     void print()
     {
@@ -35,9 +35,20 @@ class Person
         cout<< "age of the person is " <<age<<endl;
 
     }
+    int setAge(int age)
+    {
+    return age;
+    }
      string setName(string name)
     {
         return name;
+    }
+
+    Person(Person &obj)
+    {
+     name = obj.name;
+     age = obj.age;
+
     }
     ~Person()
     {
@@ -50,9 +61,13 @@ int main()
 Person p1;
 Person p2("Allmeen" , 22);
 cout<<p2.getID();
-cout<<p2.getName(); 
-p2.print();
+Person p3(p2);
 
-cout <<"new name is "<< p2.setName("Rohit");
+cout<<p2.getName(); 
+p3.print();
+
+cout << "new name is "<< p2.setName("Rohit");
+
+cout << "new age is "<< p2.setAge(18);
 return 0;
 }
